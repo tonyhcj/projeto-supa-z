@@ -13,8 +13,10 @@ create table contatos (
   telefone text not null
 );
 ```
+
 ### Configuração da Z-API
 * Configurada sem a camada de segurança extra (caso contrário, será necessário passar cabeçalhos adicionais de segurança no código).
+
 
 ## Como Configurar e Executar o Projeto
 
@@ -44,6 +46,8 @@ Execute com:
 python3 main.py
 ```
 
-> **historico:** Por padrão os logs são registrados em `message.log`. Para alterar o comportamento e observar os logs no **terminal**, remova o parâmetro `filename="message.log",` no início do arquivo `main.py`.
+
+
+> **historico:** Por padrão os logs são registrados em `message.log`. Para alterar o comportamento e observar os logs no **terminal**, remova os parâmetros `filename="message.log", filemode="a",` no início do arquivo `main.py`.
 
 > **limite:** Por padrão, o script busca até **3 contatos** cadastrados considerando os mais recentes. Para alterar esse comportamento, modifique o parâmetro `limit` na função `get_contatos()` dentro de `supabase_client.py`.
