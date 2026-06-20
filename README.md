@@ -14,10 +14,6 @@ create table contatos (
 );
 ```
 
-### Configuração da Z-API
-* Configurada sem a camada de segurança extra (caso contrário, será necessário passar cabeçalhos adicionais de segurança no código).
-
-
 ## Como Configurar e Executar o Projeto
 
 ### 1. Instalar as dependências
@@ -36,6 +32,7 @@ SUPABASE_KEY= (sua chave)
 
 ZAPI_INSTANCE_ID=(seu id de instancia z-api)
 ZAPI_TOKEN=(seu token)
+ZAPI_CLIENT=(seu token de segurança, para o cabeçalho)
 ```
 
 ### 3. Executar o Script de Teste
