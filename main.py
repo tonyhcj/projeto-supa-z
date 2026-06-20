@@ -18,7 +18,7 @@ def main():
         telefone = c["telefone"]
 
         mensagem = f"Olá, {nome} tudo bem com você?"
-        print(f" (Testando processo) Enviaria para {nome} ({telefone}) -> {mensagem}")
+        logging.info(f" (Testando processo) Enviaria para {nome} ({telefone}) -> {mensagem}")
 
 if __name__ == "__main__":
     main()
