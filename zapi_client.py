@@ -8,8 +8,8 @@ INSTANCE_ID = os.getenv("ZAPI_INSTANCE_ID")
 TOKEN = os.getenv("ZAPI_TOKEN")
 CLIENT = os.getenv("ZAPI_CLIENT")
 
-if not INSTANCE_ID or not TOKEN:
-    raise Exception("Variáveis ZAPI_INSTANCE_ID ou ZAPI_TOKEN não encontradas no .env")
+if not INSTANCE_ID or not TOKEN or not CLIENT:
+    raise Exception("Variáveis da Z-API não encontradas no .env")
 
 BASE_URL = f"https://api.z-api.io/instances/{INSTANCE_ID}/token/{TOKEN}"
 
