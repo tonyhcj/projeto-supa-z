@@ -13,5 +13,5 @@ if not url or not key:
 supabase = create_client(url, key)
 
 def get_contatos(limit=3):
-    response = supabase.table("contatos").select("*").limit(limit).execute()
+    response = supabase.table("contatos").select("*").order("id",desc=True).limit(limit).execute()
     return response.data
