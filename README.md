@@ -38,7 +38,7 @@ ZAPI_INSTANCE_ID=(seu id de instancia z-api)
 ZAPI_TOKEN=(seu token)
 ```
 
-### 4. Executar o Script de Teste
+### 3. Executar o Script de Teste
 
 Execute com:
 
