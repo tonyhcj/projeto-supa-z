@@ -2,7 +2,7 @@
 
 Esse projeto é um bot simples de disparo de mensagens via WhatsApp (Z-API) integrado com o Supabase como banco de dados.
 
-###Setup da Tabela no Supabase
+### Setup da Tabela no Supabase
 
 Para que o script funcione, você precisa criar uma tabela chamada `contatos` no editor SQL do seu Supabase. Execute o comando abaixo:
 
