@@ -3,6 +3,8 @@ from zapi_client import enviar_mensagem
 import logging
 
 logging.basicConfig(
+    filename="message.log",
+    filemode="a",
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
