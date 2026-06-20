@@ -1,4 +1,5 @@
 from supabase_client import get_contatos
+from zapi_client import enviar_mensagem
 import logging
 
 logging.basicConfig(
@@ -7,7 +8,7 @@ logging.basicConfig(
 )
 
 def main():
-    contatos = get_contatos(limit=3)
+    contatos = get_contatos()
 
     if not contatos:
         logging.warning("Nenhum contato encontrado.")
@@ -18,7 +19,10 @@ def main():
         telefone = c["telefone"]
 
         mensagem = f"Olá, {nome} tudo bem com você?"
-        logging.info(f" (Testando processo) Enviaria para {nome} ({telefone}) -> {mensagem}")
+
+        status, resp = enviar_mensagem(telefone, mensagem)
+
+        logging.info(f"Enviado para {nome} ({telefone}) | status={status}")
 
 if __name__ == "__main__":
     main()
